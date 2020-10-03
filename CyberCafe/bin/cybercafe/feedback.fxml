@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.*?>
+<?import javafx.scene.text.*?>
+<?import java.lang.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane id="AnchorPane" prefHeight="768.0" prefWidth="1366.0" style="-fx-background-color: white;" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="cybercafe.FeedbackController">
+   <children>
+      <Label layoutX="14.0" prefHeight="73.0" prefWidth="272.0" text="Feedback Form" textFill="#393939" underline="true">
+         <font>
+            <Font name="Arial" size="36.0" />
+         </font>
+      </Label>
+      <Label layoutX="18.0" layoutY="92.0" prefHeight="35.0" prefWidth="1075.0" text="Please fill out this brief feedback form so we can ensure a top quality experience to all of our visitors." textFill="#393939">
+         <font>
+            <Font size="24.0" />
+         </font></Label>
+      <Label layoutX="24.0" layoutY="163.0" prefHeight="35.0" prefWidth="363.0" text="Is this your first visit to the cafe ?" textFill="#393939">
+         <font>
+            <Font size="24.0" />
+         </font></Label>
+      <JFXRadioButton fx:id="visit_yes" layoutX="39.0" layoutY="197.0" text="Yes" textFill="#1b1b1b">
+         <toggleGroup>
+            <ToggleGroup fx:id="visit_group" />
+         </toggleGroup>
+         <font>
+            <Font size="24.0" />
+         </font>
+      </JFXRadioButton>
+      <JFXRadioButton fx:id="visit_no" layoutX="41.0" layoutY="238.0" text="No" textFill="#1b1b1b" toggleGroup="$visit_group">
+         <font>
+            <Font size="24.0" />
+         </font></JFXRadioButton>
+      <Label layoutX="22.0" layoutY="284.0" prefHeight="35.0" prefWidth="650.0" text="What is the likelihood that you will return to this cafe again?" textFill="#393939">
+         <font>
+            <Font size="24.0" />
+         </font></Label>
+      <JFXRadioButton fx:id="unlikely" layoutX="46.0" layoutY="525.0" text="Unlikely to Return" textFill="#1b1b1b">
+         <toggleGroup>
+            <ToggleGroup fx:id="return_likelihood" />
+         </toggleGroup>
+         <font>
+            <Font size="24.0" />
+         </font>
+      </JFXRadioButton>
+      <JFXRadioButton fx:id="slightly_likely" layoutX="47.0" layoutY="475.0" text="Slightly Likely" textFill="#1b1b1b" toggleGroup="$return_likelihood">
+         <font>
+            <Font size="24.0" />
+         </font></JFXRadioButton>
+      <JFXRadioButton fx:id="moderately_likely" layoutX="48.0" layoutY="424.0" text="Moderately Likely" textFill="#1b1b1b" toggleGroup="$return_likelihood">
+         <font>
+            <Font size="24.0" />
+         </font></JFXRadioButton>
+      <JFXRadioButton fx:id="very_likely" layoutX="48.0" layoutY="375.0" text="Very Likely" textFill="#1b1b1b" toggleGroup="$return_likelihood">
+         <font>
+            <Font size="24.0" />
+         </font></JFXRadioButton>
+      <JFXRadioButton fx:id="extremely_likely" layoutX="47.0" layoutY="323.0" text="Extremely Likely" textFill="#1b1b1b" toggleGroup="$return_likelihood">
+         <font>
+            <Font size="24.0" />
+         </font></JFXRadioButton>
+      <Label layoutX="22.0" layoutY="584.0" prefHeight="35.0" prefWidth="957.0" text="Please provide any additional comments or suggestions to help us meet your expectation!" textFill="#393939">
+         <font>
+            <Font size="24.0" />
+         </font></Label>
+      <JFXButton layoutX="1082.0" layoutY="656.0" onAction="#feedback_received" prefHeight="59.0" prefWidth="182.0" style="-fx-border-color: black;" text="Submit Feedback" textFill="#363535">
+         <font>
+            <Font size="18.0" />
+         </font></JFXButton>
+      <JFXTextArea fx:id="feedback_field" focusColor="RED" layoutX="18.0" layoutY="619.0" prefHeight="133.0" prefWidth="943.0" style="-fx-background-color: #e4e4e4;" />
+   </children>
+</AnchorPane>

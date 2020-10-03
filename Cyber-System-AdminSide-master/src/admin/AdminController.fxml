@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.shape.*?>
+<?import com.jfoenix.controls.*?>
+<?import javafx.scene.image.*?>
+<?import javafx.scene.text.*?>
+<?import java.lang.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane id="AnchorPane" prefHeight="500.0" prefWidth="800.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="admin.AdminControllerController">
+   <children>
+      <Label alignment="CENTER" contentDisplay="TOP" layoutX="270.0" layoutY="60.0" prefHeight="41.0" prefWidth="238.0" text="Admin Settings" AnchorPane.leftAnchor="270.0" AnchorPane.rightAnchor="292.0">
+         <font>
+            <Font name="Arial" size="27.0" />
+         </font>
+      </Label>
+      <ImageView fitHeight="32.0" fitWidth="32.0" layoutX="254.0" layoutY="65.0" pickOnBounds="true" preserveRatio="true" AnchorPane.bottomAnchor="403.0" AnchorPane.leftAnchor="254.0" AnchorPane.rightAnchor="514.0" AnchorPane.topAnchor="65.0">
+         <image>
+            <Image url="@../setting.png" />
+         </image>
+      </ImageView>
+      <JFXTextField fx:id="admin_name" focusColor="#0d0303" labelFloat="true" layoutX="270.0" layoutY="161.0" onKeyReleased="#keyReleased" prefHeight="25.0" prefWidth="218.0" promptText="Enter Name" AnchorPane.leftAnchor="270.0" AnchorPane.rightAnchor="312.0">
+         <font>
+            <Font size="16.0" />
+         </font></JFXTextField>
+      <JFXPasswordField fx:id="admin_pass" focusColor="#1b0808" labelFloat="true" layoutX="270.0" layoutY="244.0" onKeyReleased="#keyReleased" prefHeight="25.0" prefWidth="218.0" promptText="Enter Password" AnchorPane.leftAnchor="270.0" AnchorPane.rightAnchor="312.0">
+         <font>
+            <Font size="16.0" />
+         </font></JFXPasswordField>
+      <JFXButton fx:id="login_button" layoutX="297.0" layoutY="331.0" onAction="#admin_login" prefHeight="41.0" prefWidth="164.0" style="-fx-border-color: black;" text="Admin Login" AnchorPane.leftAnchor="297.0" AnchorPane.rightAnchor="339.0" AnchorPane.topAnchor="331.0" />
+      <Label fx:id="forgot_pass" layoutX="127.0" layoutY="385.0" onMouseClicked="#forgot_password" text="Forgot your password?" textFill="#8d8888" visible="false" AnchorPane.leftAnchor="127.0" AnchorPane.rightAnchor="551.0" />
+      <ImageView fitHeight="41.0" fitWidth="43.0" layoutX="20.0" layoutY="138.0" pickOnBounds="true" preserveRatio="true" />
+      <ImageView fitHeight="41.0" fitWidth="43.0" layoutX="27.0" layoutY="242.0" pickOnBounds="true" preserveRatio="true" />
+   </children>
+</AnchorPane>

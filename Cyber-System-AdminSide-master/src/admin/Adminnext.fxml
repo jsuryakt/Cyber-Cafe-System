@@ -1,0 +1,115 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.shape.*?>
+<?import javafx.scene.image.*?>
+<?import javafx.geometry.*?>
+<?import javafx.scene.text.*?>
+<?import com.jfoenix.controls.*?>
+<?import java.lang.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane id="AnchorPane" prefHeight="736.0" prefWidth="1320.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="admin.AdminnextController">
+   <children>
+      <JFXTabPane prefHeight="500.0" prefWidth="800.0" style="-fx-background-color: white;" stylesheets="@admin.css" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+         <tabs>
+            <Tab text="Check Status">
+              <content>
+                <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                     <children>
+                        <TableView fx:id="usertable" layoutX="2.0" layoutY="14.0" onMouseClicked="#get_user_id" prefHeight="468.0" prefWidth="1311.0">
+                          <columns>
+                            <TableColumn fx:id="userid" prefWidth="125.0" text="User ID" />
+                            <TableColumn fx:id="username" prefWidth="134.0" text="User Name" />
+                              <TableColumn fx:id="usagetime" minWidth="5.0" prefWidth="128.0" text="Usage Time" />
+                              <TableColumn fx:id="billamount" minWidth="0.0" prefWidth="127.0" text="Bill Amount" />
+                              <TableColumn fx:id="extraamount" prefWidth="133.0" text="Extra Amount" />
+                              <TableColumn fx:id="totalamount" prefWidth="114.0" text="Total Amount" />
+                              <TableColumn fx:id="firstvisit" prefWidth="87.0" text="First Visit" />
+                              <TableColumn fx:id="likelihoodtoreturn" prefWidth="184.0" text="Likelihood to Return" />
+                              <TableColumn fx:id="feedback" prefWidth="308.0" text="Feedback" />
+                          </columns>
+                        </TableView>
+                        <Label layoutX="240.0" layoutY="588.0" prefHeight="44.0" prefWidth="208.0" text="Add Extra Amount:">
+                           <font>
+                              <Font size="24.0" />
+                           </font>
+                        </Label>
+                        <JFXTextField fx:id="extra" alignment="CENTER" focusColor="BLACK" labelFloat="true" layoutX="484.0" layoutY="589.0" prefHeight="42.0" prefWidth="121.0" promptText="Extra Amount" unFocusColor="BLACK">
+                           <font>
+                              <Font size="15.0" />
+                           </font></JFXTextField>
+                        <Label layoutX="448.0" layoutY="588.0" prefHeight="44.0" prefWidth="36.0" text="Rs." textFill="#110505">
+                           <font>
+                              <Font size="24.0" />
+                           </font>
+                        </Label>
+                        <JFXButton buttonType="RAISED" layoutX="909.0" layoutY="590.0" onAction="#extra_enter" prefHeight="47.0" prefWidth="140.0" style="-fx-border-color: black; -fx-background-color: white;" text="Submit" textFill="#1b0a0a">
+                           <font>
+                              <Font size="16.0" />
+                           </font></JFXButton>
+                     </children>
+                  </AnchorPane>
+              </content>
+            </Tab>
+            <Tab text="Add New Admin">
+              <content>
+                <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                     <children>
+                        <Label layoutX="175.0" layoutY="150.0" lineSpacing="2.0" prefHeight="30.0" prefWidth="189.0" text="Enter New Admin Name:">
+                           <font>
+                              <Font name="Arial Narrow Bold" size="18.0" />
+                           </font>
+                        </Label>
+                        <Label layoutX="160.0" layoutY="265.0" prefHeight="30.0" prefWidth="218.0" text="Enter New Admin Password:">
+                           <font>
+                              <Font name="Arial Narrow Bold" size="18.0" />
+                           </font>
+                        </Label>
+                        <JFXTextField fx:id="admin_name" focusColor="#ae0e0e" layoutX="126.0" layoutY="205.0" onKeyReleased="#keyReleased2" prefHeight="32.0" prefWidth="317.0" />
+                        <JFXPasswordField fx:id="admin_pass" focusColor="#ae0e0e" layoutX="124.0" layoutY="319.0" onKeyReleased="#keyReleased2" prefHeight="40.0" prefWidth="325.0" />
+                        <JFXButton fx:id="signup_button" buttonType="RAISED" layoutX="181.0" layoutY="444.0" onAction="#create_new_admin" prefHeight="45.0" prefWidth="180.0" style="-fx-border-color: black; -fx-border-radius: 0; -fx-border-width: ; -fx-background-color: white;" text="Create New Admin" textAlignment="JUSTIFY">
+                           <font>
+                              <Font name="System Bold" size="12.0" />
+                           </font>
+                        </JFXButton>
+                        <Label layoutX="151.0" layoutY="24.0" prefHeight="57.0" prefWidth="267.0" text="Register a new Admin">
+                           <font>
+                              <Font name="Arial Unicode MS" size="25.0" />
+                           </font>
+                        </Label>
+                        <ImageView fitHeight="37.0" fitWidth="38.0" layoutX="113.0" layoutY="34.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../add_user.png" />
+                           </image></ImageView>
+                        <JFXTextArea editable="false" focusColor="#c32525" layoutX="576.0" layoutY="131.0" prefHeight="286.0" prefWidth="632.0" text="1. Password should be of 8 charcters or more.&#10;2. Password should have atleast one Lower Case Letter.&#10;3. Password should have atleast one Upper Case Letter.&#10;4. Password should have atleast one Numeric Digit.&#10;&#10;If all the above conditions are satisfied then the password is accepted.&#10;If you Fail to see the &quot;Create New Admin&quot; button, &#10;please check that all the passsword requirements are satisfied." unFocusColor="#fffdfd">
+                           <font>
+                              <Font size="20.0" />
+                           </font></JFXTextArea>
+                        <Label layoutX="576.0" layoutY="87.0" lineSpacing="2.0" prefHeight="37.0" prefWidth="283.0" text="Password Setting Rules:" textFill="#0d0505" underline="true">
+                           <font>
+                              <Font name="System Bold Italic" size="25.0" />
+                           </font>
+                        </Label>
+                        <ImageView fitHeight="37.0" fitWidth="33.0" layoutX="75.0" layoutY="198.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../username.jpg" />
+                           </image>
+                        </ImageView>
+                        <ImageView fitHeight="43.0" fitWidth="56.0" layoutX="70.0" layoutY="309.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../pass.png" />
+                           </image>
+                        </ImageView>
+                        <Line endX="100.0" startX="-100.0" />
+                        <Line endX="100.0" startX="-100.0" />
+                     </children>
+                  </AnchorPane>
+              </content>
+            </Tab>
+         </tabs>
+      </JFXTabPane>
+   </children>
+</AnchorPane>

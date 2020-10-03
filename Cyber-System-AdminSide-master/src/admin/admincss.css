@@ -1,0 +1,19 @@
+/*
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+*/
+/* 
+    Created on : 17 Nov, 2019, 10:55:18 PM
+    Author     : Jayasurya
+*/
+
+.tree-table-view
+{
+    -fx-font-size:26;
+}
+
+.tree-table-colum{
+    -fx-pref-width:300;
+    -fx-font-size:20;
+}

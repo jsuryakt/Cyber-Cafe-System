@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.*?>
+<?import javafx.scene.text.*?>
+<?import java.lang.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane id="AnchorPane" prefHeight="500.0" prefWidth="800.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="cybercafe.SessionController">
+   <children>
+      <AnchorPane focusTraversable="true" prefHeight="400.0" prefWidth="600.0" style="-fx-background-color: white;" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+         <children>
+            <Label layoutX="25.0" layoutY="26.0" text="Your session :" textFill="RED" AnchorPane.leftAnchor="25.0" AnchorPane.rightAnchor="382.0">
+               <font>
+                  <Font size="35.0" />
+               </font>
+            </Label>
+            <Label fx:id="timerLabel" layoutX="250.0" layoutY="23.0" prefHeight="54.0" prefWidth="201.0" text="00:00:00" AnchorPane.leftAnchor="250.0" AnchorPane.rightAnchor="149.0">
+               <font>
+                  <Font size="40.0" />
+               </font>
+            </Label>
+            <JFXButton fx:id="end_session" layoutX="616.0" layoutY="428.0" onAction="#endSession" prefHeight="51.0" prefWidth="186.0" ripplerFill="RED" style="-fx-border-color: black;" text="End Session" textFill="#f50f0f" AnchorPane.bottomAnchor="21.0" AnchorPane.rightAnchor="38.0">
+               <font>
+                  <Font size="20.0" />
+               </font>
+            </JFXButton>
+            <Label layoutX="40.0" layoutY="109.0" prefHeight="28.0" prefWidth="101.0" text="iCafe Rules :" AnchorPane.leftAnchor="40.0" AnchorPane.rightAnchor="459.0">
+               <font>
+                  <Font name="SansSerif Bold" size="17.0" />
+               </font>
+            </Label>
+            <JFXTextArea editable="false" layoutX="40.0" layoutY="137.0" prefHeight="223.0" prefWidth="745.0" text="1. Strictly Food and Drinks are not allowed.&#10;2. No Internet Gambling allowed.&#10;3. No shouting / Loud voices.&#10;4. Do Not leave your valuable things unattended.&#10;5. Keyboard, mouse and headset should be properly handed, any damage to the mentioned parts will be fined.&#10;6.  No rocking of chair(s).&#10;7. Respect the privacy of other client(s).&#10;8. Dispose your waste properly.&#10;9. We are not responsible for any loss of any data or Personal belongings etc.&#10;10. Data Downloading will be charged extra">
+               <font>
+                  <Font size="15.0" />
+               </font>
+            </JFXTextArea>
+            <Label layoutX="40.0" layoutY="81.0" prefHeight="28.0" prefWidth="75.0" text="Welcome">
+               <font>
+                  <Font size="16.0" />
+               </font>
+            </Label>
+            <Label fx:id="user_name_display" layoutX="115.0" layoutY="81.0" prefHeight="28.0" prefWidth="162.0" textFill="RED">
+               <font>
+                  <Font size="16.0" />
+               </font>
+            </Label>
+         </children>
+      </AnchorPane>
+   </children>
+</AnchorPane>
